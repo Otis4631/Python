@@ -24,7 +24,7 @@ def init_db(db):
         table_name1 = 'url_list'
         table_name2 = 'item_info'
         cursor.execute(
-            'CREATE TABLE IF NOT EXISTS %s(id int primary key auto_increment, url varchar(255)  ,UK int UNIQUE KEY ,category varchar(255));' %
+            'CREATE TABLE IF NOT EXISTS %s(id int primary key auto_increment,status VARCHAR(10) not NULL , url varchar(255)  ,UK int UNIQUE KEY ,category varchar(255));' %
             table_name1)
         cursor.execute(
             '''
@@ -40,15 +40,15 @@ def init_db(db):
                         requirement varchar(100),
                         UK int  UNIQUE KEY,
                         company_development varchar(10));
-                       '''
+            '''
             % table_name2)
 
 
 def insert_to_item(sql, db):
     try:
         with db.cursor() as cursor:
-            # db.select_db(db_name)
             cursor.execute(sql)
             db.commit()
     except Exception as error:
+        print(sql)
         print(error)

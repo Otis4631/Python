@@ -1,0 +1,68 @@
+{% extends 'index.html' %}
+
+{% block content_data %}
+<div class="ui equal width grid" style="width: 70%; margin: 10px "> <!--顶栏数字显示 -->
+    <div class="row">
+        <div class="column">
+            <div class="ui red segment">
+                <div class="ui statistic">
+                    <div class="value">{{ count_all }}</div>
+                    <div class="label">当前招聘总数</div>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="ui red segment">
+                <div class="ui statistic">
+                    <div class="value">2000</div>
+                    <div class="label">Document</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% for i in items %}
+        <div class="row">
+            <div class="column">
+                <div class="ui blue segment">
+                    <div class="ui divided items">
+                        <div class="item">
+                            <div class="content">
+                                <div class="header"><a href="{{i.3}}">{{i.0}}</a></div>
+                                <div class="description">{{i.1}}</div>
+                                <div class="extra">
+                                    <div class="ui label">{{i.2}}</div>
+                                    <div class="ui label">{{ i.4 }}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+    <div class="ui small center pagination menu">
+        {% if items.has_previous %}
+            <a  class="icon item" href="?page = {{items.previous_page_number}}">
+                <i class="left arrow icon"></i>
+            </a>
+            {% else %}
+                <a  class="icon item" href="#">
+                    <i class="left arrow icon"></i>
+                </a>
+
+        {% endif %}
+
+        <div class="disabled item">{{items.number}} of {{items.paginator.num_pages }} </div>
+        {% if items.has_next %}
+
+            <a class="icon item" href="?page={{ items.next_page_number}}">
+            <i class="right arrow icon"></i>
+            </a>
+            {% else %}
+                <a class="icon item" href="#">
+                     <i class="right arrow icon"></i>
+                </a>
+        {% endif %}
+    </div>
+{% endblock %}

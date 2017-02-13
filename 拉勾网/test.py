@@ -1,8 +1,9 @@
 import pymysql
 import time
-# from spider import Qsize
-# db = pymysql.connect("chinali.win",'root',"QNmd4631++")
+
+import sys
 temp = 0
+print(sys.path)
 while True:
     db = pymysql.connect(
         'chinali.win',
@@ -14,11 +15,12 @@ while True:
     c.execute("select count(*) from url_list")
     for i in c:
         print("url_list: %d" % i[0])
-    c.execute("select count(*) from url_list")
+    c.execute("select count(*) from item_info")
     for i in c:
         print("item_info: %d" % i[0])
         change_data = i[0] - temp
     print(change_data)
     temp = i[0]
+    c.close()
+    time.sleep(10)
     db.close()
-    time.sleep(15)

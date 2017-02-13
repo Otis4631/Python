@@ -1,0 +1,108 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>A AWESOME WEB !</title>
+    <link rel="stylesheet" href="{% static 'css/semantic.css'%}">
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src=" {% static 'js/semantic.js' %} "></script>
+    <script src="http://cdn.hcharts.cn/highcharts/highcharts.js"></script>
+    <script src="http://cdn.hcharts.cn/highcharts/highcharts-more.js"></script>
+    <script src="http://cdn.hcharts.cn/highcharts/modules/exporting.js"></script>
+
+</head>
+
+<body>
+    <div class="ui thin  sidebar inverted vertical menu">
+        <div class="header item"> <img src={% static "images/logo2.png" %}></div>
+        <a class="item" href="">
+            Data
+            <i class="database icon"></i>
+        </a>
+        <a class="item" href="">
+            Charts
+            <i class=" bar chart icon"></i>
+        </a>
+        <a class="item" href="">
+            Others
+            <i class="  idea icon" ></i>
+        </a>
+    </div>
+    <div class="pusher">
+        <div class="ui menu">  <!-- 顶栏菜单 -->
+            <div class="header item">
+                Menu
+                <i class=" content icon"></i>
+            </div>
+            <a class="item" href="">About Us</a>
+            <a class="item" href="">Others </a>
+        </div>
+        {% block content_data %}{% endblock %}
+
+    </div>
+    <script>
+        $('.header.item').click(function() {
+            $('.sidebar.menu').sidebar('toggle');
+        });
+    </script>
+    <script>
+    $(function () {
+        var chart = Highcharts.chart('chart1', {
+            title: {
+                text: 'Chart.update'
+            },
+            subtitle: {
+                text: 'Plain'
+            },
+            xAxis: {
+                categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+            },
+            series: [{
+                type: 'column',
+                colorByPoint: true,
+                data: [29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4],
+                showInLegend: false
+            }]
+        });
+        $('#cho1').click(function () {
+            chart.update({
+                chart: {
+                    inverted: false,
+                    polar: false
+                },
+                subtitle: {
+                    text: 'Plain'
+                }
+            });
+        });
+        $('#cho2').click(function () {
+            // chart.update 支持全部属性动态更新
+            chart.update({
+                chart: {
+                    inverted: true,
+                    polar: false
+                },
+                subtitle: {
+                    text: 'Inverted'
+                }
+            });
+        });
+        $('#cho3').click(function () {
+            chart.update({
+                chart: {
+                    inverted: false,
+                    polar: true
+                },
+                subtitle: {
+                    text: 'Polar'
+                }
+            });
+        });
+    });
+
+    </script>
+</body>
+
+</html>

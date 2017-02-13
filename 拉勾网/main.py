@@ -1,17 +1,16 @@
 from channel_extract import channel_urls_list
 import spider
 import time
-from multiprocessing import Pool,Queue
+from multiprocessing import Pool
 from tqdm import tqdm
-global Q
-Q = Queue(40)
+
 def get_all_links():
     pool = Pool(processes=3)
     print(len(channel_urls_list))
     for channel, i in tqdm(zip(
             channel_urls_list, range(
             1, len(channel_urls_list) + 1))):
-        if i <36:
+        if i < 247:
             continue
         print("channel-%d 准备开始..." % i)
         try:
@@ -22,7 +21,7 @@ def get_all_links():
     print("所有频道链接已加入队列.....")
 
 def get_all_item():
-    p = Pool(2)
+    p = Pool()
     while 1:
         if spider.isQempty():
             time.sleep(20)
