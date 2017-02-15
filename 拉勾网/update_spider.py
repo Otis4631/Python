@@ -55,6 +55,7 @@ def get_item_from(Link):
     db = DBfun.connectRDB()
     link = Link[0]
     category = Link[1]
+    Mcategory = Link[2]
     try:
         wb_data = requests.get(link, timeout=15, headers=headers)
     except Exception as error:
@@ -81,6 +82,11 @@ def get_item_from(Link):
         '').replace(
             "查看地图",
         "")
+    try:
+        if company_place[0] == '-':
+            company_place = soup.select(".job_request  span")[1].string + company_place
+    except Exception as error:
+        print(error)
     company_num = soup.select(".icon-glyph-figure")[0].next.strip()
     company_development = soup.select(".icon-glyph-trend")[0].next.strip()
     position_description = soup.select(".job_bt > div")[0].text.replace('\xa0',"")
@@ -95,6 +101,7 @@ def get_item_from(Link):
     requirement = requirement.join(temp)
     sql = '''
               REPLACE INTO item_info(
+                                    Mcategory,
                                     link,
                                     UK,
                                     public_time,
@@ -106,8 +113,8 @@ def get_item_from(Link):
                                     pay,
                                     requirement,
                                     company_development)
-                    VALUES('{}',{},'{}','{}','{}','{}','{}','{}','{}','{}','{}')
-        '''.format(link, UK, public_time, category, company_name, company_place, company_num, position_description, pay, requirement, company_development)
+                    VALUES('{}','{}',{},'{}','{}','{}','{}','{}','{}','{}','{}','{}')
+        '''.format(Mcategory,link, UK, public_time, category, company_name, company_place, company_num, position_description, pay, requirement, company_development)
     print("item信息正在插入数据库...")
     DBfun.insert_to_item(sql, db)
     db.close()

@@ -62,10 +62,10 @@ def update__():
     c.close()
     db.close()
 
-
-p = Pool()
-p.apply_async(idsa)
-p.apply_async(update__())
-p.close()
-p.join()
-print('Done!')
+def update_status():
+    p = Pool()
+    p.apply_async(idsa)
+    p.apply_async(update__())
+    p.close()
+    p.join()
+    print('Done!')

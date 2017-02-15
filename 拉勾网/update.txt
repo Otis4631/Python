@@ -1,4 +1,0 @@
-Traceback (most recent call last):
-  File "update_status.py", line 19, in <module>
-    status = soup.select("div.deliver")[0].text.strip()
-IndexError: list index out of range
