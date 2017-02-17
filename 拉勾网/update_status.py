@@ -54,6 +54,8 @@ def update__():
             continue
         if len(status) == 4:
             status = "正在招聘"
+        else:
+            status = "已下线"
         cur = db.cursor()
         sql = "update item_info set status ='{}' WHERE UK={}".format(status,UK)
         cur.execute(sql)

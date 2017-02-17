@@ -40,7 +40,7 @@ def get_urls_from(channel, i):
                 UK = (re.search(r"\d+", url)).group()
                 sql = "REPLACE INTO url_list(Mcategory ,url, category,uk) SELECT '{}' ,'{}', '{}', {} FROM DUAL WHERE NOT EXISTS(SELECT UK FROM url_list WHERE UK = {}); ".format(
                     channel[0],url, category, UK, UK)
-                print("准备将URL插入数据库-channel-{}-page-{}-url-{}".format(i, page, j))
+                # print("准备将URL插入数据库-channel-{}-page-{}-url-{}".format(i, page, j))
                 DBfun.insert_to_item(sql, db)
                 time.sleep(2)
             print("channel-{} page-{} done".format(i, page))
@@ -89,7 +89,7 @@ def get_item_from(Link):
         print(error)
     company_num = soup.select(".icon-glyph-figure")[0].next.strip()
     company_development = soup.select(".icon-glyph-trend")[0].next.strip()
-    position_description = soup.select(".job_bt > div")[0].text.replace('\xa0',"")
+    position_description = soup.select(".job_bt > div")[0].text.replace('\xa0',"").replace('"',"'")
     pay = soup.select(".salary")[0].text
     requirement = ""
     # python 列表推导式
@@ -113,8 +113,8 @@ def get_item_from(Link):
                                     pay,
                                     requirement,
                                     company_development)
-                    VALUES('{}','{}',{},'{}','{}','{}','{}','{}','{}','{}','{}','{}')
-        '''.format(Mcategory,link, UK, public_time, category, company_name, company_place, company_num, position_description, pay, requirement, company_development)
+                    VALUES('{}','{}',{},'{}','{}',"{}",'{}','{}',"{}",'{}','{}','{}')
+        '''.format(Mcategory,link, UK, public_time, category, company_name.replace("'","\'"), company_place.replace("'","\'"), company_num, position_description.replace("'","\'"), pay, requirement.replace("'","\'"), company_development)
     print("item信息正在插入数据库...")
     DBfun.insert_to_item(sql, db)
     db.close()

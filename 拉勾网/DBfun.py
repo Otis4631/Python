@@ -8,9 +8,8 @@ def connectDB():
 
 
 def connectRDB():
-    db = pymysql.connect('chinali.win', 'root', 'QNmd4631++',db="lagouwang", charset='utf8')
+    db = pymysql.connect('123.207.162.101', 'root', 'QNmd4631++',db="lagouwang", charset='utf8')
     return db
-
 
 def init_db(db):
     # 创建数据库
