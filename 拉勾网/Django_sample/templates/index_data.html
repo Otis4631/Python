@@ -6,7 +6,7 @@
         <div class="column">
             <div class="ui red segment">
                 <div class="ui statistic">
-                    <div class="value">{{ count_all }}</div>
+                    <div class="value"><h1>{{ allItem }}</h1></div>
                     <div class="label">当前招聘总数</div>
                 </div>
             </div>
@@ -14,24 +14,37 @@
         <div class="column">
             <div class="ui red segment">
                 <div class="ui statistic">
-                    <div class="value">2000</div>
-                    <div class="label">Document</div>
+                    <div class="dashboard" ><h1>{{public_time|date:"Y-m-d" }}</h1></div>
+                    <div class="label">最后一次更新时间</div>
                 </div>
             </div>
         </div>
     </div>
-    {% for i in items %}
+    <div class="row">
+        <div class="column">
+            <form id ='form' method="post">
+                {% csrf_token %}
+                <div class="ui fluid action input">
+                    <input placeholder="搜索..." name="kw" type="text">
+                    <div class="ui button" id = 'submit'>搜索</div>
+                </div>
+            </form>
+        </div>
+    </div>
+    {% for item in items %}
         <div class="row">
             <div class="column">
                 <div class="ui blue segment">
                     <div class="ui divided items">
                         <div class="item">
                             <div class="content">
-                                <div class="header"><a href="{{i.3}}">{{i.0}}</a></div>
-                                <div class="description">{{i.1}}</div>
+                                <div class="header"><a href="{{item.link}}">{{item.category}}</a></div>
+                                <div class="description">{{item.position_description}}</div>
                                 <div class="extra">
-                                    <div class="ui label">{{i.2}}</div>
-                                    <div class="ui label">{{ i.4 }}</div>
+                                    <div class="ui label">{{item.company_name}}</div>
+                                    <div class="ui label">{{item.company_place}}</div>
+                                    <div class="ui label">{{item.pay}}</div>
+                                    <div class="ui label">{{item.requirement}}</div>
                                 </div>
                             </div>
                         </div>
@@ -40,10 +53,9 @@
             </div>
         </div>
     {% endfor %}
-</div>
-    <div class="ui small center pagination menu">
-        {% if items.has_previous %}
-            <a  class="icon item" href="?page = {{items.previous_page_number}}">
+    <div class="ui large  pagination menu" style="margin:0 auto;">
+        {% ifnotequal curPage 1 %}
+            <a  class="icon item" href="?curPage={{curPage}}&&allPage={{ allPage }}&&pageType=pageUp&&kw={{ kw }}">
                 <i class="left arrow icon"></i>
             </a>
             {% else %}
@@ -51,18 +63,24 @@
                     <i class="left arrow icon"></i>
                 </a>
 
-        {% endif %}
+        {% endifnotequal %}
 
-        <div class="disabled item">{{items.number}} of {{items.paginator.num_pages }} </div>
-        {% if items.has_next %}
+        <div class="disabled item">{{curPage}} of {{allPage }} </div>
+        {% ifnotequal curPage allPage %}
 
-            <a class="icon item" href="?page={{ items.next_page_number}}">
+            <a class="icon item" href="?curPage={{ curPage }}&&allPage={{ allPage }}&&pageType=pageDown&&kw={{ kw }}">
             <i class="right arrow icon"></i>
             </a>
             {% else %}
                 <a class="icon item" href="#">
                      <i class="right arrow icon"></i>
                 </a>
-        {% endif %}
+        {% endifnotequal %}
     </div>
+</div>
+    <script>
+        $('#submit').click(function () {
+            $('#form').submit();
+        });
+    </script>
 {% endblock %}

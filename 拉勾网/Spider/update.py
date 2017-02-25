@@ -63,12 +63,12 @@ if __name__ == "__main__":
     from update_status import update_status
     import os
     start = time.clock()
-    os.system('cp /var/lib/mysql/lagouwang/* /root/mysqlbak/lagouwang')
-    with open('/root/mysqlbak/lagouwang/bak.log','w+') as fp:
-        fp.write(str(time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time()))))
-    print('数据库备份完毕')
-    update_status()
-    print('状态更新完成')
+    # os.system('cp /var/lib/mysql/lagouwang/* /root/mysqlbak/lagouwang')
+    # with open('/root/mysqlbak/lagouwang/bak.log','w+') as fp:
+    #     fp.write(str(time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time()))))
+    # print('数据库备份完毕')
+    # update_status()
+    # print('状态更新完成')
     update_url_list()
     print('链接表更新完成，准备删除已下线信息...')
     del_offline()

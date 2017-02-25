@@ -1,50 +1,87 @@
 from django.shortcuts import render
-import pymysql
-from django.core.paginator import Paginator
-db = pymysql.connect('123.207.162.101', 'root', 'QNmd4631++',db="lagouwang", charset='utf8')
-
-
-def execute_sql(sql):
-    cur = db.cursor()
-    cur.execute(sql)
-    res = cur
-    cur.close()
-    return res
-
-def get_all_count():
-    sql = "select count(*) from item_info "
-    re = [res[0] for res in execute_sql(sql)]
-    return re[0]
-def get_all_items():
-    sql = "select category,position_description,pay,UK,requirement from item_info order by UK asc limit 2000 "
-    re = [res for res in execute_sql(sql)]
-    return re
-
+from Django_web.models import item_info,url_list
+from django.db.models import Q
+import json
 def index(request):
-    limit = 5
-    res = list(get_all_items())
-    Res = [list(i) for i in res]
-    links =['https://www.lagou.com/jobs/{}.html'.format(link[3]) for link in res]
-    for link,i in zip(links,range(3000)):
-        Res[i][3] = link
-    paginator = Paginator(Res,limit)
-    page = request.GET.get('page',1)
-    load = paginator.page(page)
+    public_time = item_info.objects.all().order_by('-public_time')[:1]
+    ONE_PAGE_OF_DATA = 5
+    try:
+        curPage = int(request.GET.get('curPage'))
+        pageType = str(request.GET.get('pageType'))
+        allPage = int(request.GET.get('allPage'))
+        keyWord = str(request.GET.get('kw',''))
+    except Exception:
+        curPage = 1
+        allPage = 1
+        pageType = ''
+        keyWord = ''
+        # 判断点击了【下一页】还是【上一页】
+    if request.method == 'POST':
+        keyWord = request.POST.get('kw',None)
+        keyWord = str(keyWord).replace(' ','')
+        curPage = 1
+        allPage = 1
+    if pageType == 'pageDown':
+        curPage += 1
+    elif pageType == 'pageUp':
+        curPage -= 1
+    startPos = (curPage - 1) * ONE_PAGE_OF_DATA
+    endPos = startPos + ONE_PAGE_OF_DATA
+    try:
+        q1 = Q(category__icontains=keyWord)
+        q2 = Q(Mcategory__icontains=keyWord)
+        q3 = Q(company_place__icontains=keyWord)
+        q4 = Q(UK=keyWord)
+        query =q1 | q2 | q3 | q4
+        posts = item_info.objects.filter(query)[startPos:endPos]
+        allItemCount =(item_info.objects.filter(query).count())
+    except UnboundLocalError as e:
+        print(e)
+        posts = item_info.objects.all()[startPos:endPos]
+        allItemCount = item_info.objects.all().count()
+    if curPage == 1 and allPage == 1:  # 标记1
+        allPage = allItemCount // ONE_PAGE_OF_DATA
+        remainPost = allItemCount % ONE_PAGE_OF_DATA
+        if remainPost > 0:
+            allPage += 1
+    context = {'items': posts,
+               'allPage': allPage,
+               'curPage': curPage,
+               'allItem':allItemCount,
+               'public_time':public_time[0].public_time,
+               'kw':keyWord
+               }
+    return render(request, "index_data.html", context)
+
+
+def chart(request):
+    Mdata = []
+    cdata = []
+    Mcategory = list(url_list.objects.values_list('Mcategory', flat=True).distinct())
+    total = url_list.objects.count()
+    for item in Mcategory:
+        data = []
+        y = url_list.objects.filter(Mcategory=item).count()
+        temp_dict = {
+            'name':item,
+            'y':y,
+            'drilldown':item,
+            'per': (y/total)
+        }
+        Mdata.append(temp_dict)
+        category = url_list.objects.filter(Mcategory=item).values_list('category',flat=True).distinct()
+        total = url_list.objects.filter(Mcategory=item).count()
+        for cate in category:
+            data.append([cate,url_list.objects.filter(Mcategory=item).filter(category=cate).count()])
+            temp_dict = {
+                'data':data,
+                'name': item,
+                'id': item,
+            }
+            cdata.append(temp_dict)
 
     context = {
-        'count_all' : get_all_count(),
-        'showing_count':len(res),
-        'items' : load,
-        'links':links
-        # 'category':res
-        # 'des':
-        # 'pay':
-        # 'require':
-
-
-
+        'Mdata':json.dumps(Mdata,ensure_ascii=False),
+        'cdata':json.dumps(cdata,ensure_ascii=False)
     }
-    # (1, '正在招聘', datetime.date(2017, 2, 3), 'Java', 'STW', '南京-栖霞区-元化路8号1栋协同创新大厦405', '50-150人',
-    # '5k-10k ', '经验1-3年 /本科及以上 /全职', 2742428, '未融资')
-    return render(request, 'index_data.html',context)
-# Create your views here.
+    return render(request,'charts.html',context)

@@ -19,7 +19,7 @@ headers = {
 def get_urls_from(channel, i):
     print("函数get_url已启动,PID:",os.getpid())
     db = DBfun.connectRDB()
-    for page in range(1, 5):
+    for page in range(1, 50):
         link = "{}{}/".format(channel[1], page)
         try:
             wb_data = requests.get(link, timeout=11, headers=headers)

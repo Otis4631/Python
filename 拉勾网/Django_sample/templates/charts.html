@@ -1,21 +1,124 @@
+{% extends 'index.html' %}
 
-
-
+{% block content_data %}
 <div class="ui equal width grid" style="width: 70%; margin: 10px; "> <!-- item -->
     <div class="row">
-        <div class="column">
+        <div class="column" id="hdkf">
             <div class="ui  black segment">
                 <div class="ui simple dropdown item">   <!-- 选择按钮-->
-                    Dropdown
+                    图表类型
                     <i class="dropdown icon"></i>
                     <div class="menu">
-                        <div class="item">Choice 1</div>
-                        <div class="item">Choice 2</div>
-                        <div class="item">Choice 3</div>
+                        <div class="item" id="column">柱状图</div>
+                        <div class="item" id="pie">饼图</div>
+                        <div class="item" id="line">折线图</div>
                     </div>
                 </div>
-                <div class="ui container" id="chart1"></div>  <!-- 图表 -->
+                <div  id="container" style="min-width:800px;height:700px"></div>  <!-- 图表 -->
+                <!-- <div class= "ui button" id="open3d">开启3D</div>
+                <div class="ui button" id="close3d">关闭3D</div> -->
+                </div>
+            </div>
+            <div>
+
             </div>
         </div>
     </div>
 </div>
+{% endblock %}
+
+
+{% block js %}
+    <script>
+$(function () {
+    var chart = new Highcharts.chart('container', {
+        credits: {
+             enabled:true,                    // 默认值，如果想去掉版权信息，设置为false即可
+            text: 'chinali.win',             // 显示的文字
+            href: 'http://www.chinali.win'     // 链接地址
+        },
+        chart: {
+          type:'column'
+        },
+        title: {
+            text: '当前拉勾网招聘信息统计图'
+        },
+        xAxis: {
+            type: 'category'
+        },
+        legend: {
+            enabled: true
+        },
+        plotOptions: {
+            series: {
+                borderWidth: 1,
+                dataLabels: {
+                    enabled: true,
+                    alpha: 15,
+                    beta: 15
+                }
+            }
+        },
+
+        series: [{
+                    tooltip: {
+            pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.per:.2f}%</b> of total<br/>'
+        },
+            name:'category',
+            colorByPoint: true,
+            data: {{ Mdata|safe }}
+
+        }
+        ],
+        drilldown: {
+          type: 'column',
+            tooltip: {
+                pointFormat:'<span style="color:{point.color}">{point.name}</span>: <b>{(point.data.2 / point.total):.2f}%</b> of total<br/>'},
+            series:{{ cdata|safe }}
+        }
+    });
+    $('#pie').click(function () {
+    chart.update({
+        chart: {
+            type:'pie'
+        }
+    });
+  });
+  $('#column').click(function () {
+  chart.update({
+      chart: {
+          type:'column'
+      }
+  });
+});
+$('#line').click(function () {
+chart.update({
+    chart: {
+        type:'line'
+    }
+  });
+  });
+});
+
+
+
+
+
+// $('#open3d').click(function () {
+// chart.update({
+//     chart: {
+//       options3d: {
+//              enabled: true,
+//              alpha: 15,
+//              beta: 15,
+//              depth: 50,
+//              viewDistance: 25
+//          }
+//       }
+//     });
+//   });
+
+
+</script>
+
+{% endblock %}

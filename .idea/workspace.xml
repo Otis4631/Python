@@ -2,19 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d0e92fa-2b0c-44ff-a9ac-fdc434a6893d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/拉勾网/Spider/loop.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/拉勾网/DBfun.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/拉勾网/channel_extract.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/拉勾网/jianshi.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/拉勾网/main.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/拉勾网/spider.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/拉勾网/update.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/拉勾网/update_spider.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/拉勾网/update_status.py" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Python.iml" afterPath="$PROJECT_DIR$/.idea/Python.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/e66493f2-54ce-487f-9dce-b2f5dc10b3c9.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/e66493f2-54ce-487f-9dce-b2f5dc10b3c9.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/拉勾网/Django_sample/.idea/dataSources.local.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/拉勾网/Django_sample/.idea/dataSources.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/拉勾网/Django_sample/.idea/dataSources/bd2f7fb0-dc90-4321-b53a-64cf7c7dce17.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/拉勾网/Django_sample/.idea/dataSources/bd2f7fb0-dc90-4321-b53a-64cf7c7dce17/storage.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/拉勾网/Django_sample/.idea/tableDiffSettings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/拉勾网/Django_sample/Django_web/test.py" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/拉勾网/Django_sample/.idea/Django_sample.iml" afterPath="$PROJECT_DIR$/拉勾网/Django_sample/.idea/Django_sample.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/拉勾网/Django_sample/.idea/misc.xml" afterPath="$PROJECT_DIR$/拉勾网/Django_sample/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/拉勾网/Django_sample/.idea/workspace.xml" afterPath="$PROJECT_DIR$/拉勾网/Django_sample/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/拉勾网/Django_sample/Django_sample/urls.py" afterPath="$PROJECT_DIR$/拉勾网/Django_sample/Django_sample/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/拉勾网/Django_sample/Django_web/models.py" afterPath="$PROJECT_DIR$/拉勾网/Django_sample/Django_web/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/拉勾网/Django_sample/Django_web/views.py" afterPath="$PROJECT_DIR$/拉勾网/Django_sample/Django_web/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/拉勾网/Django_sample/templates/charts.html" afterPath="$PROJECT_DIR$/拉勾网/Django_sample/templates/charts.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/拉勾网/Django_sample/templates/index.html" afterPath="$PROJECT_DIR$/拉勾网/Django_sample/templates/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/拉勾网/Django_sample/templates/index_data.html" afterPath="$PROJECT_DIR$/拉勾网/Django_sample/templates/index_data.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/拉勾网/Spider/update.py" afterPath="$PROJECT_DIR$/拉勾网/Spider/update.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/拉勾网/Spider/update_spider.py" afterPath="$PROJECT_DIR$/拉勾网/Spider/update_spider.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -30,7 +35,7 @@
     <SUITE FILE_PATH="coverage/Python$update_spider.coverage" NAME="update_spider Coverage Results" MODIFIED="1487221059033" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/拉勾网" />
     <SUITE FILE_PATH="coverage/Python$jianshi.coverage" NAME="jianshi Coverage Results" MODIFIED="1487668769605" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/拉勾网" />
     <SUITE FILE_PATH="coverage/Python$update.coverage" NAME="update Coverage Results" MODIFIED="1487835579126" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/拉勾网" />
-    <SUITE FILE_PATH="coverage/Python$update__1_.coverage" NAME="update (1) Coverage Results" MODIFIED="1487990565835" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/拉勾网/Spider" />
+    <SUITE FILE_PATH="coverage/Python$update__1_.coverage" NAME="update (1) Coverage Results" MODIFIED="1488018258573" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/拉勾网/Spider" />
     <SUITE FILE_PATH="coverage/Python$test.coverage" NAME="test Coverage Results" MODIFIED="1487324482678" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
@@ -53,33 +58,19 @@
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
     </PATH>
-    <PATH>
-      <PATH_ELEMENT>
-        <option name="myItemId" />
-        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="lagouwang@chinali.win" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="url_list" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-    </PATH>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="spider.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="spider.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/拉勾网/Spider/spider.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1185">
-              <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+            <state relative-caret-position="859">
+              <caret line="126" column="0" lean-forward="false" selection-start-line="126" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
               <folding>
-                <marker date="1486574312504" expanded="true" signature="1450:1576" ph="INSERT INTO url_list... " />
-                <marker date="1486574312504" expanded="true" signature="1489:1576" ph="SELECT 'miss... DUAL" />
-                <marker date="1486574312504" expanded="true" signature="1538:1573" ph="SELECT UK FR... url_list" />
+                <marker date="1487991900370" expanded="true" signature="1450:1576" ph="INSERT INTO url_list... " />
+                <marker date="1487991900370" expanded="true" signature="1489:1576" ph="SELECT 'miss... DUAL" />
+                <marker date="1487991900370" expanded="true" signature="1538:1573" ph="SELECT UK FR... url_list" />
               </folding>
             </state>
           </provider>
@@ -89,32 +80,19 @@
         <entry file="file://$PROJECT_DIR$/拉勾网/Spider/loop.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
-              <caret line="5" column="11" lean-forward="false" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
+              <caret line="5" column="30" lean-forward="false" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/拉勾网/Spider/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+            <state relative-caret-position="388">
+              <caret line="40" column="18" lean-forward="false" selection-start-line="40" selection-start-column="18" selection-end-line="40" selection-end-column="18" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DBfun.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/拉勾网/Spider/DBfun.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <marker date="1487317544002" expanded="true" signature="658:812" ph="CREATE TABLE... IF" />
-                <marker date="1487317544002" expanded="true" signature="906:1486" ph="CREATE TABLE... IF" />
               </folding>
             </state>
           </provider>
@@ -123,12 +101,12 @@
       <file leaf-file-name="jianshi.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/拉勾网/Spider/jianshi.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="16" column="19" lean-forward="false" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
+            <state relative-caret-position="54">
+              <caret line="2" column="8" lean-forward="false" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
-                <marker date="1487230057630" expanded="true" signature="54:83" ph="Select count... url_list" />
-                <marker date="1487230057630" expanded="true" signature="199:229" ph="Select count... item_info" />
+                <marker date="1487991900370" expanded="true" signature="54:83" ph="Select count... url_list" />
+                <marker date="1487991900370" expanded="true" signature="199:229" ph="Select count... item_info" />
               </folding>
             </state>
           </provider>
@@ -137,16 +115,16 @@
       <file leaf-file-name="update.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/拉勾网/Spider/update.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="394">
-              <caret line="70" column="19" lean-forward="true" selection-start-line="70" selection-start-column="19" selection-end-line="70" selection-end-column="19" />
+            <state relative-caret-position="864">
+              <caret line="35" column="15" lean-forward="false" selection-start-line="35" selection-start-column="15" selection-end-line="35" selection-end-column="15" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
-                <marker date="1487991480855" expanded="true" signature="592:662" ph="SELECT * FRO... url_list" />
-                <marker date="1487991480855" expanded="true" signature="637:661" ph="SELECT UK FR... item_info" />
-                <marker date="1487991480855" expanded="true" signature="1002:1047" ph="SELECT UK FR... item_info" />
-                <marker date="1487991480855" expanded="true" signature="1168:1202" ph="DELETE FROM " />
-                <marker date="1487991480855" expanded="true" signature="1237:1270" ph="DELETE FROM " />
-                <marker date="1487991480855" expanded="true" signature="1423:1481" ph="SELECT * FRO... url_list" />
+                <marker date="1488013839860" expanded="true" signature="592:662" ph="SELECT * FRO... url_list" />
+                <marker date="1488013839860" expanded="true" signature="637:661" ph="SELECT UK FR... item_info" />
+                <marker date="1488013839860" expanded="true" signature="1002:1047" ph="SELECT UK FR... item_info" />
+                <marker date="1488013839860" expanded="true" signature="1168:1202" ph="DELETE FROM " />
+                <marker date="1488013839860" expanded="true" signature="1237:1270" ph="DELETE FROM " />
+                <marker date="1488013839860" expanded="true" signature="1423:1481" ph="SELECT * FRO... url_list" />
               </folding>
             </state>
           </provider>
@@ -155,16 +133,16 @@
       <file leaf-file-name="update_status.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/拉勾网/Spider/update_status.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1107">
+            <state relative-caret-position="874">
               <caret line="71" column="12" lean-forward="false" selection-start-line="71" selection-start-column="12" selection-end-line="71" selection-end-column="12" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
-                <marker date="1487990656272" expanded="true" signature="245:275" ph="DELETE FROM " />
-                <marker date="1487990656272" expanded="true" signature="302:333" ph="DELETE FROM " />
-                <marker date="1487990656272" expanded="true" signature="583:623" ph="SELECT id fr... item_info" />
-                <marker date="1487990656272" expanded="true" signature="769:805" ph="UPDATE item_... " />
-                <marker date="1487990656272" expanded="true" signature="1072:1096" ph="select url f... url_list" />
-                <marker date="1487990656272" expanded="true" signature="1689:1732" ph="update item_... " />
+                <marker date="1487991900370" expanded="true" signature="245:275" ph="DELETE FROM " />
+                <marker date="1487991900370" expanded="true" signature="302:333" ph="DELETE FROM " />
+                <marker date="1487991900370" expanded="true" signature="583:623" ph="SELECT id fr... item_info" />
+                <marker date="1487991900370" expanded="true" signature="769:805" ph="UPDATE item_... " />
+                <marker date="1487991900370" expanded="true" signature="1072:1096" ph="select url f... url_list" />
+                <marker date="1487991900370" expanded="true" signature="1689:1732" ph="update item_... " />
               </folding>
             </state>
           </provider>
@@ -173,8 +151,43 @@
       <file leaf-file-name="update_spider.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/拉勾网/Spider/update_spider.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2049">
-              <caret line="21" column="26" lean-forward="false" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
+            <state relative-caret-position="-4">
+              <caret line="73" column="15" lean-forward="false" selection-start-line="73" selection-start-column="15" selection-end-line="73" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="lagouwang.url_list" pinned="false" current-in-tab="false">
+        <entry file="dbDummy://dbtable:/82fd5ead/e66493f2-54ce-487f-9dce-b2f5dc10b3c9/lagouwang.url_list">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="lagouwang.item_info" pinned="false" current-in-tab="false">
+        <entry file="dbDummy://dbtable:/82fd5ead/e66493f2-54ce-487f-9dce-b2f5dc10b3c9/lagouwang.item_info">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true">
+                <filter text="Mcategory=&quot;后端开发&quot;" />
+                <filter text="Mcategory=&quot;None&quot;" />
+                <filter text="category=&quot;java&quot;" />
+                <filter text="category='Python'" />
+              </filtering>
+            </state>
+          </provider>
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -207,9 +220,10 @@
         <option value="$PROJECT_DIR$/拉勾网/channel_extract.py" />
         <option value="$PROJECT_DIR$/拉勾网/update.py" />
         <option value="$PROJECT_DIR$/拉勾网/Spider/update_status.py" />
-        <option value="$PROJECT_DIR$/拉勾网/Spider/update_spider.py" />
         <option value="$PROJECT_DIR$/拉勾网/Spider/loop.py" />
+        <option value="$PROJECT_DIR$/拉勾网/Spider/main.py" />
         <option value="$PROJECT_DIR$/拉勾网/Spider/update.py" />
+        <option value="$PROJECT_DIR$/拉勾网/Spider/update_spider.py" />
       </list>
     </option>
   </component>
@@ -220,13 +234,13 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1898" />
-    <option name="y" value="185" />
+    <option name="x" value="1705" />
+    <option name="y" value="376" />
     <option name="width" value="950" />
     <option name="height" value="970" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -239,65 +253,16 @@
       <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Python" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Python" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Python" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Python" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="拉勾网" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Spider" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Python" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Python" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="拉勾网" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Font" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Django_sample" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
   </component>
-  <component name="RunManager" selected="Python.loop">
+  <component name="RunManager" selected="Python.update (1)">
     <configuration default="false" name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -611,8 +576,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.loop" />
-        <item index="1" class="java.lang.String" itemvalue="Python.update (1)" />
+        <item index="0" class="java.lang.String" itemvalue="Python.update (1)" />
+        <item index="1" class="java.lang.String" itemvalue="Python.loop" />
         <item index="2" class="java.lang.String" itemvalue="Python.update" />
         <item index="3" class="java.lang.String" itemvalue="Python.jianshi" />
         <item index="4" class="java.lang.String" itemvalue="Python.test" />
@@ -678,16 +643,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1898" y="185" width="950" height="970" extended-state="0" />
+    <frame x="1705" y="376" width="950" height="970" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32079646" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27854857" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985386" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.66805845" sideWeight="0.50533617" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.49557522" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.50774336" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.043841336" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985386" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43463302" sideWeight="0.49466383" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3417431" sideWeight="0.49466383" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2497332" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985386" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -745,6 +710,11 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/test.py" />
+    <entry file="file://$PROJECT_DIR$/拉勾网/main.py" />
+    <entry file="file://$PROJECT_DIR$/拉勾网/spider.py" />
+    <entry file="file://$PROJECT_DIR$/拉勾网/DBfun.py" />
+    <entry file="file://$PROJECT_DIR$/拉勾网/update_status.py" />
     <entry file="file:///usr/lib/python3/dist-packages/requests/sessions.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="16659">
@@ -753,43 +723,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/拉勾网/test.py" />
-    <entry file="file://$PROJECT_DIR$/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="11" column="44" lean-forward="false" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/拉勾网/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="23" column="14" lean-forward="false" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/拉勾网/spider.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2484">
-          <caret line="100" column="10" lean-forward="false" selection-start-line="100" selection-start-column="10" selection-end-line="100" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/拉勾网/DBfun.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1350">
-          <caret line="50" column="23" lean-forward="false" selection-start-line="50" selection-start-column="23" selection-end-line="50" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/拉勾网/update_status.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" column="36" lean-forward="true" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/test.py" />
+    <entry file="file://$PROJECT_DIR$/拉勾网/main.py" />
+    <entry file="file://$PROJECT_DIR$/拉勾网/spider.py" />
+    <entry file="file://$PROJECT_DIR$/拉勾网/DBfun.py" />
+    <entry file="file://$PROJECT_DIR$/拉勾网/update_status.py" />
     <entry file="file:///usr/lib/python3/dist-packages/requests/sessions.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="16659">
@@ -798,74 +736,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/拉勾网/test.py" />
-    <entry file="file://$PROJECT_DIR$/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="11" column="44" lean-forward="false" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/拉勾网/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="22" column="19" lean-forward="true" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/拉勾网/spider.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1809">
-          <caret line="75" column="0" lean-forward="false" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/拉勾网/DBfun.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1350">
-          <caret line="50" column="23" lean-forward="true" selection-start-line="50" selection-start-column="23" selection-end-line="50" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/拉勾网/update_status.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/lib/python3/dist-packages/requests/sessions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16659">
-          <caret line="643" column="0" lean-forward="false" selection-start-line="643" selection-start-column="0" selection-end-line="643" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/test.py" />
     <entry file="file://$PROJECT_DIR$/拉勾网/test.py" />
-    <entry file="file://$PROJECT_DIR$/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/test.py" />
     <entry file="file://$PROJECT_DIR$/拉勾网/test.py" />
-    <entry file="file://$PROJECT_DIR$/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/拉勾网/test.py" />
-    <entry file="file://$PROJECT_DIR$/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/test.py" />
     <entry file="file:///usr/lib/python3/dist-packages/requests/sessions.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="16659">
@@ -888,13 +763,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/拉勾网/test.py" />
-    <entry file="file://$PROJECT_DIR$/拉勾网/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="38" column="2" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="44" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/拉勾网/main.py" />
     <entry file="file:///usr/local/lib/python3.5/dist-packages/pymysql/connections.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="182">
@@ -964,19 +833,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/拉勾网/jianshi.py">
+    <entry file="file://$PROJECT_DIR$/拉勾网/jianshi.py" />
+    <entry file="file://$PROJECT_DIR$/拉勾网/update_status.py" />
+    <entry file="file://$PROJECT_DIR$/拉勾网/channel_extract.py" />
+    <entry file="file://$PROJECT_DIR$/拉勾网/spider.py" />
+    <entry file="file://$PROJECT_DIR$/拉勾网/DBfun.py" />
+    <entry file="file://$PROJECT_DIR$/拉勾网/update_spider.py" />
+    <entry file="file://$PROJECT_DIR$/test.py" />
+    <entry file="file://$PROJECT_DIR$/拉勾网/update.py" />
+    <entry file="file://$PROJECT_DIR$/拉勾网/Spider/DBfun.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="16" column="19" lean-forward="false" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/拉勾网/update_status.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1242">
-          <caret line="49" column="12" lean-forward="false" selection-start-line="49" selection-start-column="12" selection-end-line="49" selection-end-column="12" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1004,54 +872,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/拉勾网/channel_extract.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="2" column="36" lean-forward="false" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/拉勾网/spider.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="729">
-          <caret line="35" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/拉勾网/DBfun.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="26" column="24" lean-forward="false" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/拉勾网/update_spider.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1481">
-          <caret line="119" column="0" lean-forward="false" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/拉勾网/update.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="509">
-          <caret line="69" column="33" lean-forward="false" selection-start-line="69" selection-start-column="33" selection-end-line="69" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/82fd5ead/e66493f2-54ce-487f-9dce-b2f5dc10b3c9/lagouwang.item_info">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -1070,77 +890,90 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/拉勾网/Spider/DBfun.py">
-      <provider selected="true" editor-type-id="text-editor">
+    <entry file="dbDummy://dbtable:/82fd5ead/e66493f2-54ce-487f-9dce-b2f5dc10b3c9/lagouwang.url_list">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1487317544002" expanded="true" signature="658:812" ph="CREATE TABLE... IF" />
-            <marker date="1487317544002" expanded="true" signature="906:1486" ph="CREATE TABLE... IF" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/拉勾网/Spider/jianshi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="16" column="19" lean-forward="false" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-            <marker date="1487230057630" expanded="true" signature="54:83" ph="Select count... url_list" />
-            <marker date="1487230057630" expanded="true" signature="199:229" ph="Select count... item_info" />
-          </folding>
+    <entry file="dbDummy://dbtable:/82fd5ead/e66493f2-54ce-487f-9dce-b2f5dc10b3c9/lagouwang.url_list">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/拉勾网/Spider/update_spider.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2049">
-          <caret line="21" column="26" lean-forward="false" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
+        <state relative-caret-position="-4">
+          <caret line="73" column="15" lean-forward="false" selection-start-line="73" selection-start-column="15" selection-end-line="73" selection-end-column="15" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/拉勾网/Spider/update_status.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1107">
+        <state relative-caret-position="874">
           <caret line="71" column="12" lean-forward="false" selection-start-line="71" selection-start-column="12" selection-end-line="71" selection-end-column="12" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
-            <marker date="1487990656272" expanded="true" signature="245:275" ph="DELETE FROM " />
-            <marker date="1487990656272" expanded="true" signature="302:333" ph="DELETE FROM " />
-            <marker date="1487990656272" expanded="true" signature="583:623" ph="SELECT id fr... item_info" />
-            <marker date="1487990656272" expanded="true" signature="769:805" ph="UPDATE item_... " />
-            <marker date="1487990656272" expanded="true" signature="1072:1096" ph="select url f... url_list" />
-            <marker date="1487990656272" expanded="true" signature="1689:1732" ph="update item_... " />
+            <marker date="1487991900370" expanded="true" signature="245:275" ph="DELETE FROM " />
+            <marker date="1487991900370" expanded="true" signature="302:333" ph="DELETE FROM " />
+            <marker date="1487991900370" expanded="true" signature="583:623" ph="SELECT id fr... item_info" />
+            <marker date="1487991900370" expanded="true" signature="769:805" ph="UPDATE item_... " />
+            <marker date="1487991900370" expanded="true" signature="1072:1096" ph="select url f... url_list" />
+            <marker date="1487991900370" expanded="true" signature="1689:1732" ph="update item_... " />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/拉勾网/Spider/update.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="70" column="19" lean-forward="true" selection-start-line="70" selection-start-column="19" selection-end-line="70" selection-end-column="19" />
+        <state relative-caret-position="864">
+          <caret line="35" column="15" lean-forward="false" selection-start-line="35" selection-start-column="15" selection-end-line="35" selection-end-column="15" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
-            <marker date="1487991480855" expanded="true" signature="592:662" ph="SELECT * FRO... url_list" />
-            <marker date="1487991480855" expanded="true" signature="637:661" ph="SELECT UK FR... item_info" />
-            <marker date="1487991480855" expanded="true" signature="1002:1047" ph="SELECT UK FR... item_info" />
-            <marker date="1487991480855" expanded="true" signature="1168:1202" ph="DELETE FROM " />
-            <marker date="1487991480855" expanded="true" signature="1237:1270" ph="DELETE FROM " />
-            <marker date="1487991480855" expanded="true" signature="1423:1481" ph="SELECT * FRO... url_list" />
+            <marker date="1488013839860" expanded="true" signature="592:662" ph="SELECT * FRO... url_list" />
+            <marker date="1488013839860" expanded="true" signature="637:661" ph="SELECT UK FR... item_info" />
+            <marker date="1488013839860" expanded="true" signature="1002:1047" ph="SELECT UK FR... item_info" />
+            <marker date="1488013839860" expanded="true" signature="1168:1202" ph="DELETE FROM " />
+            <marker date="1488013839860" expanded="true" signature="1237:1270" ph="DELETE FROM " />
+            <marker date="1488013839860" expanded="true" signature="1423:1481" ph="SELECT * FRO... url_list" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/拉勾网/Spider/spider.py">
+    <entry file="file://$PROJECT_DIR$/拉勾网/Spider/jianshi.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1185">
-          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        <state relative-caret-position="54">
+          <caret line="2" column="8" lean-forward="false" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
           <folding>
-            <marker date="1486574312504" expanded="true" signature="1450:1576" ph="INSERT INTO url_list... " />
-            <marker date="1486574312504" expanded="true" signature="1489:1576" ph="SELECT 'miss... DUAL" />
-            <marker date="1486574312504" expanded="true" signature="1538:1573" ph="SELECT UK FR... url_list" />
+            <element signature="e#0#12#0" expanded="true" />
+            <marker date="1487991900370" expanded="true" signature="54:83" ph="Select count... url_list" />
+            <marker date="1487991900370" expanded="true" signature="199:229" ph="Select count... item_info" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/拉勾网/Spider/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="388">
+          <caret line="40" column="18" lean-forward="false" selection-start-line="40" selection-start-column="18" selection-end-line="40" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1148,17 +981,19 @@
     <entry file="file://$PROJECT_DIR$/拉勾网/Spider/loop.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
-          <caret line="5" column="11" lean-forward="false" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
+          <caret line="5" column="30" lean-forward="false" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/拉勾网/Spider/main.py">
+    <entry file="file://$PROJECT_DIR$/拉勾网/Spider/spider.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        <state relative-caret-position="859">
+          <caret line="126" column="0" lean-forward="false" selection-start-line="126" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
           <folding>
-            <element signature="e#0#45#0" expanded="true" />
+            <marker date="1487991900370" expanded="true" signature="1450:1576" ph="INSERT INTO url_list... " />
+            <marker date="1487991900370" expanded="true" signature="1489:1576" ph="SELECT 'miss... DUAL" />
+            <marker date="1487991900370" expanded="true" signature="1538:1573" ph="SELECT UK FR... url_list" />
           </folding>
         </state>
       </provider>
