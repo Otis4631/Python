@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="lagouwang@chinali.win" uuid="e66493f2-54ce-487f-9dce-b2f5dc10b3c9">
+    <data-source name="GFW@chinali.win" uuid="e66493f2-54ce-487f-9dce-b2f5dc10b3c9">
       <database-info product="MySQL" version="5.5.53-0ubuntu0.14.04.1" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
         <extra-name-characters>#@</extra-name-characters>
         <identifier-quote-string>`</identifier-quote-string>
@@ -10,6 +10,21 @@
       <secret-storage>master_key</secret-storage>
       <user-name>root</user-name>
       <resolve-scope>lagouwang:</resolve-scope>
+    </data-source>
+    <data-source name="GFW@chinali.win [2]" uuid="c4fcb18b-459f-41c2-b17f-da260cde4f50">
+      <database-info product="MySQL" version="5.5.53-0ubuntu0.14.04.1" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+        <extra-name-characters>#@</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <resolve-scope>GFW:</resolve-scope>
+    </data-source>
+    <data-source name="@localhost [2]" uuid="928cf640-32af-42af-8880-73716d057c52">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <secret-storage>master_key</secret-storage>
+      <first-sync>true</first-sync>
     </data-source>
   </component>
 </project>
