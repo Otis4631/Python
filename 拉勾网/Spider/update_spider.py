@@ -19,7 +19,7 @@ headers = {
 def get_urls_from(channel, i):
     print("函数get_url已启动,PID:",os.getpid())
     db = DBfun.connectRDB()
-    for page in range(1, 50):
+    for page in range(1, 5):
         link = "{}{}/".format(channel[1], page)
         try:
             wb_data = requests.get(link, timeout=11, headers=headers)
@@ -38,8 +38,7 @@ def get_urls_from(channel, i):
             for url, j in zip(urls_tag, range(1,50)):
                 url = 'http:' + url.get('href')
                 UK = (re.search(r"\d+", url)).group()
-                sql = "REPLACE INTO url_list(Mcategory ,url, category,uk) SELECT '{}' ,'{}', '{}', {} FROM DUAL WHERE NOT EXISTS(SELECT UK FROM url_list WHERE UK = {}); ".format(
-                    channel[0],url, category, UK, UK)
+                sql = "REPLACE INTO url_list(Mcategory ,url, category,uk)VALUES ('{}','{}','{}',{})".format(channel[0],url,category,UK)
                 # print("准备将URL插入数据库-channel-{}-page-{}-url-{}".format(i, page, j))
                 DBfun.insert_to_item(sql, db)
                 time.sleep(2)
@@ -115,6 +114,6 @@ def get_item_from(Link):
                                     company_development)
                     VALUES('{}','{}',{},'{}','{}',"{}",'{}','{}',"{}",'{}','{}','{}')
         '''.format(Mcategory,link, UK, public_time, category, company_name.replace("'","\'"), company_place.replace("'","\'"), company_num, position_description.replace("'","\'"), pay, requirement.replace("'","\'"), company_development)
-    print("item信息正在插入数据库...")
     DBfun.insert_to_item(sql, db)
+    print(UK,'以插入数据库...')
     db.close()

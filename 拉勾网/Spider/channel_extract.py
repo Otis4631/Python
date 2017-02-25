@@ -16,5 +16,3 @@ def get_channel_urls():
     pass
 
 get_channel_urls()
-print("共有%d个频道" % len(channel_urls_list))
-pass

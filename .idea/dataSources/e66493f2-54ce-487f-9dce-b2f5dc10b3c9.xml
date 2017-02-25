@@ -434,97 +434,102 @@ model</ColNames>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
     <column id="104" parent="18" name="status">
-      <Position>2</Position>
+      <Position>3</Position>
       <DataType>varchar(10)|0</DataType>
       <NotNull>1</NotNull>
+      <DefaultExpression>&apos;正在招聘&apos;</DefaultExpression>
     </column>
     <column id="105" parent="18" name="public_time">
-      <Position>3</Position>
+      <Position>4</Position>
       <DataType>date|0</DataType>
     </column>
     <column id="106" parent="18" name="category">
-      <Position>4</Position>
-      <DataType>varchar(30)|0</DataType>
-    </column>
-    <column id="107" parent="18" name="company_name">
       <Position>5</Position>
       <DataType>varchar(30)|0</DataType>
     </column>
-    <column id="108" parent="18" name="company_place">
+    <column id="107" parent="18" name="company_name">
       <Position>6</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="108" parent="18" name="company_place">
+      <Position>7</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
     <column id="109" parent="18" name="company_num">
-      <Position>7</Position>
+      <Position>8</Position>
       <DataType>varchar(30)|0</DataType>
     </column>
     <column id="110" parent="18" name="position_description">
-      <Position>8</Position>
+      <Position>9</Position>
       <DataType>text|0</DataType>
     </column>
     <column id="111" parent="18" name="pay">
-      <Position>9</Position>
+      <Position>10</Position>
       <DataType>varchar(30)|0</DataType>
     </column>
     <column id="112" parent="18" name="requirement">
-      <Position>10</Position>
+      <Position>11</Position>
       <DataType>varchar(100)|0</DataType>
     </column>
     <column id="113" parent="18" name="UK">
-      <Position>11</Position>
+      <Position>12</Position>
       <DataType>int(11)|0</DataType>
     </column>
     <column id="114" parent="18" name="company_development">
-      <Position>12</Position>
+      <Position>13</Position>
       <DataType>varchar(10)|0</DataType>
     </column>
     <column id="115" parent="18" name="link">
-      <Position>13</Position>
+      <Position>14</Position>
       <DataType>varchar(50)|0</DataType>
     </column>
-    <index id="116" parent="18" name="UK">
+    <column id="116" parent="18" name="Mcategory">
+      <Position>2</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <index id="117" parent="18" name="UK">
       <ColNames>UK</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="117" parent="18" name="PRIMARY">
+    <key id="118" parent="18" name="PRIMARY">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="118" parent="18" name="UK">
+    <key id="119" parent="18" name="UK">
       <ColNames>UK</ColNames>
       <UnderlyingIndexName>UK</UnderlyingIndexName>
     </key>
-    <column id="119" parent="19" name="id">
+    <column id="120" parent="19" name="id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="120" parent="19" name="url">
+    <column id="121" parent="19" name="url">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="121" parent="19" name="UK">
+    <column id="122" parent="19" name="UK">
       <Position>3</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="122" parent="19" name="category">
+    <column id="123" parent="19" name="category">
       <Position>4</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="123" parent="19" name="Mcategory">
+    <column id="124" parent="19" name="Mcategory">
       <Position>5</Position>
       <DataType>varchar(20)|0</DataType>
     </column>
-    <index id="124" parent="19" name="UK">
+    <index id="125" parent="19" name="UK">
       <ColNames>UK</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="125" parent="19" name="PRIMARY">
+    <key id="126" parent="19" name="PRIMARY">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="126" parent="19" name="UK">
+    <key id="127" parent="19" name="UK">
       <ColNames>UK</ColNames>
       <UnderlyingIndexName>UK</UnderlyingIndexName>
     </key>
