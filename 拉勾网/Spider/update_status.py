@@ -32,13 +32,14 @@ def idsa():
     cuq.close()
     db.close()
 
-def update__():
+def update():
     db = pymysql.connect('chinali.win', 'root', 'QNmd4631++', db="lagouwang", charset='utf8')
     c = db.cursor()
     sql_url = "select url from url_list "
     c.execute(sql_url)
     urls = [url[0] for url in c]
     i = 0
+    j = 0
     for url in urls:
         i+=1
         UK = (re.search(r"\d+", url)).group()
@@ -49,8 +50,10 @@ def update__():
         soup = BeautifulSoup(web_data.text,'lxml')
         try:
             status = soup.select("div.deliver")[0].text.strip()
-        except Exception:
-            delete_item(UK)
+        except Exception as e :
+            print('将要删除 %d' % j)
+            print(e)
+            # delete_item(UK)
             continue
         if len(status) == 4:
             status = "正在招聘"
@@ -65,8 +68,5 @@ def update__():
     db.close()
 
 def update_status():
-    p = Pool()
     # p.apply_async(idsa)
-    p.apply_async(update__())
-    p.close()
-    p.join()
+    update()
