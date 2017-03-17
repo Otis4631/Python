@@ -68,7 +68,6 @@ def update():
     db.close()
 
 
-update()
 def update_status():
     # p.apply_async(idsa)
     update()

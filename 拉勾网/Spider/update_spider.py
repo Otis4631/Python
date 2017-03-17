@@ -19,7 +19,7 @@ headers = {
 def get_urls_from(channel, i):
     print("函数get_url已启动,PID:",os.getpid())
     db = DBfun.connectRDB()
-    for page in range(1, 50):
+    for page in range(1, 5):
         link = "{}{}/".format(channel[1], page)
         try:
             wb_data = requests.get(link, timeout=11, headers=headers)
@@ -55,8 +55,14 @@ def get_item_from(Link):
     link = Link[0]
     category = Link[1]
     Mcategory = Link[2]
+    print(Link)
     try:
         wb_data = requests.get(link, timeout=15, headers=headers)
+        print(wb_data.status_code)
+        if wb_data.status_code == 404:
+            print('404 Not Found')
+            # switch_proxy()   修改代理地址
+            return 0
     except Exception as error:
         print("item 连接失败，错误为：", error)
         return 0

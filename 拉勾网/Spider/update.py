@@ -12,6 +12,7 @@ def update_url_list():
     start_time = time.clock()
     P = Pool()
     for channel, i in (zip(channel_urls_list, range(1, len(channel_urls_list) + 1))):
+
         P.apply_async(func=update_spider.get_urls_from,args=(channel,i))
     P.close()
     P.join()
@@ -63,18 +64,18 @@ if __name__ == "__main__":
     from update_status import update_status
     import os
     start = time.clock()
-    try:
-        os.system('mysqldump -u root -p QNmd4631++ --databases lagouwang mysql > /backup.sql')
-    except Exception as e:
-        print(e)
-    with open('/root/mysqlbak/lagouwang/bak.log','w+') as fp:
-        fp.write(str(time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time()))))
-    print('数据库备份完毕')
-    update_status()
-    print('状态更新完成')
+    # try:
+    #     os.system('mysqldump -u root -p QNmd4631++ --databases lagouwang mysql > /backup.sql')
+    # except Exception as e:
+    #     print(e)
+    # with open('/root/mysqlbak/lagouwang/bak.log','w+') as fp:
+    #     fp.write(str(time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time()))))
+    # print('数据库备份完毕')
+    # update_status()
+    # print('状态更新完成')
     update_url_list()
     print('链接表更新完成，准备删除已下线信息...')
-    del_offline()
+    #del_offline()
     print('已删除下线信息，准备同步数据表...')
     sync_table()
     print('数据表同步完成，准备修复数据表...')

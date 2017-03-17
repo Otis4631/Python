@@ -37,7 +37,7 @@ def index(request):
         allItemCount =(item_info.objects.filter(query).count())
     except UnboundLocalError as e:
         print(e)
-        posts = item_info.objects.all()[startPos:endPos]
+        posts = item_info.objects.all().order_by('UK')[startPos:endPos]
         allItemCount = item_info.objects.all().count()
     if curPage == 1 and allPage == 1:  # 标记1
         allPage = allItemCount // ONE_PAGE_OF_DATA
