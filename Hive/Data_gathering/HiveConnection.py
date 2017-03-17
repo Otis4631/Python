@@ -36,7 +36,7 @@ def hiveInit(db):
                           phone_mac varchar(3000),
                           phone_rssi int,
                           phone_range int,
-                          phone_cssid int,
+                          phone_tmc varchar(100),
                           tc boolean,
                           ds boolean,
                           essid varchar(3000)
@@ -73,6 +73,7 @@ def mysqlInit(db):
 def execute(db,sql):
     cur = db.cursor()
     cur.execute(sql)
+    db.commit()
     return cur
 db = mysqlConnect()
 mysqlInit(db)
