@@ -13,7 +13,8 @@ def hiveConnect():
 def mysqlConnect():
     db = pymysql.connect(host='localhost',
                          user='root',
-                         password='test'
+                         password='test',
+                         database='hive_data',
                         )
     return db
 
@@ -75,6 +76,3 @@ def execute(db,sql):
     cur.execute(sql)
     db.commit()
     return cur
-db = mysqlConnect()
-mysqlInit(db)
-sql = ""

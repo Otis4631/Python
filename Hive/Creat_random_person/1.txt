@@ -1,1 +1,0 @@
-{"addr": "......", "lon": "103.973083", "wssid": "ffffff", "rate": 1, "lat": "30.748093", "mmac": "ffffff", "data": {"mac": "mac4203", "tmc": "fffffffff", "essid": "ssssssss", "tc": true, "time": "2017-03-17 20:05:24", "rssi": -97.17479516331206, "range": 26, "ds": true, "ts": "hello2"}, "id": 0}
