@@ -4,17 +4,16 @@ import HiveConnection
 app = Flask(__name__)
 
 BOOL = {'Y':1,'N':0}
+db = HiveConnection.mysqlConnect()
 
 @app.route('/post', methods=['POST'])
 def post():
-    db = HiveConnection.mysqlConnect()
+
     cursor = db.cursor()
     jsonEncode = str(request.form.get('a'))
     jsonDecode = json.loads(jsonEncode)
     jsonDecode['data']['ds'] =BOOL[jsonDecode['data']['ds']]
     jsonDecode['data']['tc'] = BOOL[jsonDecode['data']['tc']]
-    # print jsonDecode
-    # jsonDecode = {u'addr': u'......', u'lon': u'103.973083', u'wmac': u'sssssss', u'wssid': u'ffffff', u'rate': 1, u'lat': u'30.748093', u'mmac': u'ffffff', u'data': {u'ts': u'hello2', u'range': 27, u'ds': True, u'mac': u'mac3048', u'tmc': u'fffffffff', u'essid': u'ssssssss', u'time': u'2017-03-21 19:17:54', u'rssi': -20.34902054720321, u'tc': True}, u'id': 0}
 
     sql = """
              INSERT INTO data
@@ -29,7 +28,6 @@ def post():
                         jsonDecode['data']['ds'],
                         jsonDecode['data']['essid'], jsonDecode['data']['ts'])
 
-    print sql
     HiveConnection.execute(db,sql)
 
     return 'welcome'
