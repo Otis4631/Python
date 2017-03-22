@@ -3,13 +3,13 @@ import json
 import HiveConnection
 app = Flask(__name__)
 
-BOOL = {'Y':1,'N':0}
-db = HiveConnection.mysqlConnect()
+BOOL = {'Y': 1, 'N': 0}
+
+
 
 @app.route('/post', methods=['POST'])
 def post():
-
-    cursor = db.cursor()
+    db = HiveConnection.mysqlConnect()
     jsonEncode = str(request.form.get('a'))
     jsonDecode = json.loads(jsonEncode)
     jsonDecode['data']['ds'] =BOOL[jsonDecode['data']['ds']]
@@ -34,5 +34,5 @@ def post():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True,host='0.0.0.0',threaded=True)
 

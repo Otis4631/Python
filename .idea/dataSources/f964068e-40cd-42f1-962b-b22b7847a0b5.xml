@@ -34,8 +34,7 @@
     </column>
     <column id="14" parent="8" name="time">
       <Position>6</Position>
-      <DataType>timestamp|0</DataType>
-      <NotNull>1</NotNull>
+      <DataType>datetime|0</DataType>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
     </column>
     <column id="15" parent="8" name="lat">
@@ -62,21 +61,25 @@
       <Position>12</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="21" parent="8" name="phone_cssid">
-      <Position>13</Position>
-      <DataType>int(11)|0</DataType>
-    </column>
-    <column id="22" parent="8" name="tc">
+    <column id="21" parent="8" name="tc">
       <Position>14</Position>
       <DataType>tinyint(1)|0</DataType>
     </column>
-    <column id="23" parent="8" name="ds">
+    <column id="22" parent="8" name="ds">
       <Position>15</Position>
       <DataType>tinyint(1)|0</DataType>
     </column>
-    <column id="24" parent="8" name="essid">
+    <column id="23" parent="8" name="essid">
       <Position>16</Position>
       <DataType>varchar(3000)|0</DataType>
+    </column>
+    <column id="24" parent="8" name="ts">
+      <Position>17</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="25" parent="8" name="phone_tmc">
+      <Position>13</Position>
+      <DataType>varchar(50)|0</DataType>
     </column>
   </database-model>
 </dataSource>

@@ -20,19 +20,18 @@ def createData(wifi_info):
         'ts': random.choice(WIFI_AP_SSID),
         'tc': random.choice(('Y', 'N')),
         'ds': random.choice(('Y', 'N')),
-        'tmc':'fffffffff',
-        'essid':'ssssssss',
+        'tmc': 'fffffffff',
+        'essid': 'ssssssss',
         'time':datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
     }
     jsonEncode = json.dumps(wifi_info)
     try:
         requests.post('http://127.0.0.1:5000/post', data={'a':jsonEncode})
-    except Exception , e:
-        with open('log.txt','a') as fp:
-            fp.write(str(time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time())))+ '----' + str(e) + '\n')
+        print "111111"
+    except Exception, e:
+        with open('log.txt', 'a') as fp:
+            fp.write(str(time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time()))) + '----' + str(e) + '\n')
         print e
-
-
 
 
 def createWifiInfo(wifi_info, id):
