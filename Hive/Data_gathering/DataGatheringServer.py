@@ -1,6 +1,6 @@
 from flask import Flask, request
 import json
-import HiveConnection
+import DataBaseConnection
 app = Flask(__name__)
 
 BOOL = {'Y': 1, 'N': 0}
@@ -9,7 +9,7 @@ BOOL = {'Y': 1, 'N': 0}
 
 @app.route('/post', methods=['POST'])
 def post():
-    db = HiveConnection.mysqlConnect()
+    db = DataBaseConnection.mysqlConnect()
     jsonEncode = str(request.form.get('a'))
     jsonDecode = json.loads(jsonEncode)
     jsonDecode['data']['ds'] =BOOL[jsonDecode['data']['ds']]
@@ -28,7 +28,7 @@ def post():
                         jsonDecode['data']['ds'],
                         jsonDecode['data']['essid'], jsonDecode['data']['ts'])
 
-    HiveConnection.execute(db,sql)
+    DataBaseConnection.execute(db, sql)
 
     return 'welcome'
 

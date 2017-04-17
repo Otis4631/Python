@@ -5,7 +5,7 @@ import datetime
 import json
 import requests
 
-WIFI_PROBE = 1000
+WIFI_PROBE = 50
 WIFI_PROBE_ID = set()
 WIFI_AP_SSID = ('hello1', 'hello2', 'hello3')
 MAC_TABLE = ['mac' + str(i) for i in range(5000)]
@@ -20,14 +20,14 @@ def createData(wifi_info):
         'ts': random.choice(WIFI_AP_SSID),
         'tc': random.choice(('Y', 'N')),
         'ds': random.choice(('Y', 'N')),
-        'tmc': 'fffffffff',
-        'essid': 'ssssssss',
+        'tmc': 'tmc',
+        'essid': 'essid',
         'time':datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
     }
     jsonEncode = json.dumps(wifi_info)
     try:
         requests.post('http://127.0.0.1:5000/post', data={'a':jsonEncode})
-        print "111111"
+
     except Exception, e:
         with open('log.txt', 'a') as fp:
             fp.write(str(time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time()))) + '----' + str(e) + '\n')
@@ -37,10 +37,10 @@ def createData(wifi_info):
 def createWifiInfo(wifi_info, id):
     wifi_info['id'] = id
     wifi_info['rate'] = 1
-    wifi_info['mmac'] = 'ffffff'
-    wifi_info['wssid'] = 'ffffff'
-    wifi_info['wmac'] = 'sssssss'
-    wifi_info['addr'] = '......'
+    wifi_info['mmac'] = 'mmac'
+    wifi_info['wssid'] = 'wssid'
+    wifi_info['wmac'] = 'wmac'
+    wifi_info['addr'] = 'addr'
     wifi_info['lat'] = '30.748093'
     wifi_info['lon'] = '103.973083'
 
