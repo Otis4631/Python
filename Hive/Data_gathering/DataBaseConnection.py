@@ -27,6 +27,7 @@ def hiveInit(db):
     # 创建数据表
 
     sql = '''CREATE TABLE IF NOT EXISTS hive_data.data(
+                          id int,
                           probe_id varchar(3000),
                           probe_mac varchar(3000),
                           rate int,
@@ -43,12 +44,12 @@ def hiveInit(db):
                           tc boolean,
                           ds boolean,
                           ts VARCHAR(50),
-                          essid varchar(3000),
-                          id int
+                          essid varchar(3000)
                           )
               PARTITIONED BY (time DATE)
-
-
+              row format delimited
+              fields terminated by ','
+              lines terminated by '\n'
           '''
     cur.execute(sql)
 
@@ -59,12 +60,12 @@ def mysqlInit(db):
         # # 创建数据表
 
         sql = '''CREATE TABLE  hive_data.data(
+                          id int PRIMARY KEY NOT NULL auto_increment,
                           probe_id varchar(3000),
                           probe_mac varchar(3000),
                           rate int,
                           wssid varchar(3000),
                           wmac varchar(3000),
-
                           lat DOUBLE ,
                           lon DOUBLE ,
                           addr varchar(3000),
@@ -76,7 +77,6 @@ def mysqlInit(db):
                           ds boolean,
                           ts VARCHAR(50),
                           essid varchar(3000),
-                          id int,
                           time TIMESTAMP)
               '''
         cur.execute(sql)
@@ -89,5 +89,4 @@ def execute(db,sql):
 def hiveExecute(db,sql):
     cur = db.cursor()
     cur.execute(sql)
-    # db.commit()
     return cur
