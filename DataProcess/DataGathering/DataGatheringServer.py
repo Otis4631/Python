@@ -12,11 +12,30 @@
 
 import json
 from flask import Flask, request
-from DataProcess.Database import DataBaseConnection
+from Database import DataBase
+import datetime
 
 app = Flask(__name__)
 
 BOOL = {'Y': 1, 'N': 0}  # 用于转换WIFI探针中的Bool类型到mysql中可识别的bool类型。
+
+dataKeys = set()
+keys = set()
+
+dataKeys.add('ds')      # 手机是否睡眠
+dataKeys.add('tc')      # 是否与路由器相连
+dataKeys.add('ts')      # 目标ssid，手机链接的WIFI的ssid
+dataKeys.add('tmc')     # 目标设备的mac，手机链接WIFI的mac
+dataKeys.add('essid')   # 手机连接的ssid
+
+keys.add('wssid')
+keys.add('wmac')
+keys.add('addr')
+
+
+def timeChange():
+
+    pass
 
 
 @app.route('/post', methods=['POST'])
@@ -28,40 +47,68 @@ def post():
                         :rtype str.
         Others:         无。
     """
-    db = DataBaseConnection.mysqlConnect()
-    jsonEncode = str(request.form.get('a'))
+    db = DataBase.mysqlConnect()
+    jsonEncode = request.form.get('data')
     jsonDecode = json.loads(jsonEncode)
-    jsonDecode['data']['ds'] = BOOL[jsonDecode['data']['ds']]
-    jsonDecode['data']['tc'] = BOOL[jsonDecode['data']['tc']]
 
-    sql = """
-             INSERT INTO data
-                     (probe_id,probe_mac,rate,wssid,wmac,time,lat,lon,
-                     addr,phone_mac,phone_rssi,phone_range,phone_tmc, tc,ds,essid,ts)
-               VALUES('{}','{}',{},'{}','{}','{}',{},{},'{}','{}',{},{},'{}',{},{},"{}","{}")
-             """.format(
-        jsonDecode['id'],
-        jsonDecode['mmac'],
-        jsonDecode['rate'],
-        jsonDecode['wssid'],
-        jsonDecode['wmac'],
-        jsonDecode['data']['time'],
-        jsonDecode['lat'],
-        jsonDecode['lon'],
-        jsonDecode['addr'],
-        jsonDecode['data']['mac'],
-        jsonDecode['data']['rssi'],
-        jsonDecode['data']['range'],
-        jsonDecode['data']['tmc'],
-        jsonDecode['data']['tc'],
-        jsonDecode['data']['ds'],
-        jsonDecode['data']['essid'],
-        jsonDecode['data']['ts'])
-    try:
-        DataBaseConnection.execute(db, sql)
-    except Exception as error:
-        print "数据插入异常：" + error
 
+    for key in keys:
+        if key not in jsonDecode:
+            jsonDecode[key] = 'NULL'
+
+    if not jsonDecode['lon']:
+        jsonDecode['lon'] = -1
+    if not jsonDecode['lat']:
+        jsonDecode['lat'] = -1
+
+    for key in keys:
+        if key not in jsonDecode:
+            jsonDecode[key] = 'NULL'
+
+    for item in jsonDecode['data']:
+        for key in dataKeys:
+            if key not in item:
+                item[key] = 'NULL'
+        if item['ds'] != 'NULL':
+            item['ds'] = BOOL[item['ds']]
+        else:
+            item['ds'] = -1
+        if item['tc'] != 'NULL':
+            item['tc'] = BOOL[item['tc']]
+        else:
+            item['tc'] = -1
+    # jsonDecode['data']['ds'] = BOOL[int(jsonDecode['data']['ds'])]
+    # jsonDecode['data']['tc'] = BOOL[int(jsonDecode['data']['tc'])]
+    #
+        sql = """
+                 INSERT INTO data
+                         (probe_id,probe_mac,rate,wssid,wmac,time,lat,lon,
+                         addr,phone_mac,phone_rssi,phone_range,phone_tmc, tc,ds,essid,ts)
+                   VALUES('{}','{}',{},'{}','{}','{}',{},{},'{}','{}',{},{},'{}',{},{},"{}","{}")
+                 """.format(
+            jsonDecode['id'],
+            jsonDecode['mmac'],
+            jsonDecode['rate'],
+            jsonDecode['wssid'],
+            jsonDecode['wmac'],
+            datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+            jsonDecode['lat'],
+            jsonDecode['lon'],
+            jsonDecode['addr'],
+            item['mac'],
+            item['rssi'],
+            item['range'],
+            item['tmc'],
+            item['tc'],
+            item['ds'],
+            item['essid'],
+            item['ts'])
+        try:
+            DataBase.mysqlExecute(db, sql)
+        except Exception as error:
+            print sql
+            print "数据插入异常：" + str(error)
+    print str(len(jsonDecode['data'])) + "条数据已存入数据库"
     return 'welcome'
 
 

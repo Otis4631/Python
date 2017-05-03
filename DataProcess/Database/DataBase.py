@@ -2,7 +2,7 @@
 
 # ####################################################################
 #   Copyright (C), team BugKiller
-#   File name:  DataBaseConnection
+#   File name:  DataBase
 #   Author:李政      Version:1.00        Date: 2017-04-10
 #
 #   Description:    数据库操作相关函数，包括mysql和hive数据库的链接，sql语句的执行函数以及数据库的初始化。
@@ -122,8 +122,8 @@ def mysqlInit(db):
                           rate int,
                           wssid varchar(3000),
                           wmac varchar(3000),
-                          lat DOUBLE ,
-                          lon DOUBLE ,
+                          lat DOUBLE DEFAULT 0,
+                          lon DOUBLE DEFAULT 0,
                           addr varchar(3000),
                           phone_mac varchar(3000),
                           phone_rssi int,

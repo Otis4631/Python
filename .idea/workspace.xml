@@ -3,24 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="2d0e92fa-2b0c-44ff-a9ac-fdc434a6893d" name="Default" comment="">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/-C" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/webResources.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DataProcess/DataGathering/DataGatheringServer.py" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DataProcess/DataGathering/start.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DataProcess/Database/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DataProcess/__init__.py" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/Hive/Data_gathering/DataGatheringServer.py" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/Hive/Data_gathering/test.py" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Hive/Creat_random_person/.idea/Creat_random_person.iml" afterPath="$PROJECT_DIR$/DataProcess/CreateRandomData/.idea/Creat_random_person.iml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Hive/Creat_random_person/.idea/misc.xml" afterPath="$PROJECT_DIR$/DataProcess/CreateRandomData/.idea/misc.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Hive/Creat_random_person/.idea/modules.xml" afterPath="$PROJECT_DIR$/DataProcess/CreateRandomData/.idea/modules.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Hive/Creat_random_person/.idea/workspace.xml" afterPath="$PROJECT_DIR$/DataProcess/CreateRandomData/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Hive/Creat_random_person/CreateData.py" afterPath="$PROJECT_DIR$/DataProcess/CreateRandomData/CreateData.py" />
       <change type="MOVED" beforePath="$PROJECT_DIR$/Hive/Creat_random_person/log.txt" afterPath="$PROJECT_DIR$/DataProcess/CreateRandomData/log.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Hive/Data_gathering/DataBaseConnection.py" afterPath="$PROJECT_DIR$/DataProcess/Database/DataBaseConnection.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Hive/Data_gathering/DataImport.py" afterPath="$PROJECT_DIR$/DataProcess/DataGathering/DataImport.py" />
       <change type="MOVED" beforePath="$PROJECT_DIR$/Hive/Data_gathering/data.java" afterPath="$PROJECT_DIR$/DataProcess/DataGathering/data.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Python.iml" afterPath="$PROJECT_DIR$/.idea/Python.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -112,7 +99,7 @@
         <entry file="file://$PROJECT_DIR$/DataProcess/DataGathering/DataGatheringServer.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="388">
-              <caret line="16" column="21" lean-forward="false" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+              <caret line="16" column="21" lean-forward="true" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
               <folding>
                 <element signature="e#407#418#0" expanded="true" />
                 <marker date="1492522568440" expanded="true" signature="1149:1416" ph="INSERT INTO data... " />
@@ -770,7 +757,14 @@
       <option name="project" value="LOCAL" />
       <updated>1492504821460</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="添加注释">
+      <created>1492523449743</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1492523449744</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -806,7 +800,7 @@
     <frame x="0" y="24" width="1920" height="993" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0859375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985386" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.739819" sideWeight="0.50572914" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.203125" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -843,7 +837,8 @@
     <MESSAGE value="data gather framework v1.0" />
     <MESSAGE value="data gather framework v1.1" />
     <MESSAGE value="finish data gathering server and data import" />
-    <option name="LAST_COMMIT_MESSAGE" value="finish data gathering server and data import" />
+    <MESSAGE value="添加注释" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加注释" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1197,6 +1192,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1319,7 +1315,7 @@
     <entry file="file://$PROJECT_DIR$/DataProcess/DataGathering/DataGatheringServer.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="388">
-          <caret line="16" column="21" lean-forward="false" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+          <caret line="16" column="21" lean-forward="true" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
           <folding>
             <element signature="e#407#418#0" expanded="true" />
             <marker date="1492522568440" expanded="true" signature="1149:1416" ph="INSERT INTO data... " />
