@@ -1,0 +1,331 @@
+
+21.写一个动物声音模拟器，具有较好的扩展性。
+22.写一个柱体类，求其体积。具有较好的扩展性。
+
+23．银行与利息。
+    阅读程序，请按模板要求，将【代码】替换为Java程序代码。
+Bank.java
+public class Bank {
+   int savedMoney;
+   int year;
+   double interest;
+   double interestRate = 0.29;
+   public double computerInterest() {
+      interest=year*interestRate*savedMoney;
+      return interest;
+   }
+   public void setInterestRate(double rate) {
+      interestRate = rate;
+   }
+}
+ConstructionBank.java
+public class ConstructionBank extends Bank {
+   double year;
+   public double computerInterest() {
+      super.year=(int)year;
+      double r = year-(int)year;
+      int day=(int)(r*1000);
+      double yearInterest = 【代码1】 //super调用隐藏的computerInterest()方法
+      double dayInterest = day*0.0001*savedMoney;
+      interest= yearInterest+dayInterest;
+      System.out.printf("%d元存在建设银行%d年零%d天的利息:%f元\n",
+                         savedMoney,super.year,day,interest);
+      return interest;
+   }
+}
+BankOfDalian.java
+public class BankOfDalian extends Bank {
+   double year;
+   public double computerInterest() {
+      super.year=(int)year;
+      double r = year-(int)year;
+      int day=(int)(r*1000);
+      double yearInterest = 【代码2】// super调用隐藏的computerInterest()方法
+      double dayInterest = day*0.00012*savedMoney;
+      interest= yearInterest+dayInterest;
+      System.out.printf("%d元存在大连银行%d年零%d天的利息:%f元\n",
+                         savedMoney,super.year,day,interest);
+      return interest;
+   }
+}
+SaveMoney.java
+public class SaveMoney {
+   public static void main(String args[]) {
+      int amount=8000;
+      ConstructionBank bank1 = new ConstructionBank();
+      bank1.savedMoney = amount;
+      bank1.year = 8.236;
+      bank1.setInterestRate(0.035);
+      double interest1 = bank1.computerInterest();
+      BankOfDalian bank2 = new BankOfDalian();
+      bank2.savedMoney = amount;
+      bank2.year = 8.236;
+      bank2.setInterestRate(0.035);
+      double interest2=bank2.computerInterest();
+      System.out.printf("两个银行利息相差%f元\n",interest2-interest1);
+   }
+}   
+24．面积之和。
+     阅读程序，请按模板要求，将【代码】替换为Java程序代码。
+Geometry.java
+public abstract class Geometry  {
+     public abstract double getArea();
+}
+TotalArea.java
+public class TotalArea {
+   Geometry[] tuxing;
+   double totalArea=0;
+   public void setTuxing(Geometry[] t) {
+      tuxing=t;
+   }
+   public double computerTotalArea() {
+     【代码3】//用循环语句让tuxing的元素调用getArea方法，并将返回的值累加到totalArea
+      return totalArea;
+   }    
+}
+
+Rect.java
+public class Rect extends Geometry {
+    double a,b;
+    Rect(double a,double b) {
+        this.a = a; 
+        this.b = b; 
+    }
+   【代码1】 //重写 getArea()方法
+}
+
+Circle.java
+public class Circle extends Geometry {
+    double r;
+    Circle(double r) {
+        this.r = r;
+    }
+   【代码2】 //重写 getArea()方法
+}
+
+MainClass.java
+public class MainClass{
+   public static void main(String args[]) {
+      Geometry [] tuxing=new Geometry[29]; //有29个Geometry对象
+      for(int i=0;i<tuxing.length;i++) {   //29个Geometry对象分成两类
+          if(i%2==0)
+              tuxing[i]=new Rect(16+i,68);
+          else if(i%2==1)
+              tuxing[i]=new Circle(10+i);
+      } 
+      TotalArea computer=new TotalArea();
+      computer.setTuxing(tuxing);  
+      System.out.printf("各种图形的面积之和:\n%f",computer.computerTotalArea());
+   }
+}
+ 
+25.  歌手大赛
+请按模板要求，将【代码】替换为Java程序代码。
+CompurerAverage.java
+public interface CompurerAverage {  //接口
+   public double average(double x[]);
+}
+SongGame.java
+public class SongGame implements CompurerAverage {
+   public double average(double x[]) {
+      int count=x.length;
+      double aver=0,temp=0;
+      for(int i=0;i<count;i++) {
+         for(int j=i;j<count;j++) {
+            if(x[j]<x[i]) {
+              temp=x[j];
+              x[j]=x[i];
+              x[i]=temp;  
+            } 
+         }
+      }
+      for(int i=1;i<count-1;i++) {
+         aver=aver+x[i];
+      }
+      if(count>2)
+         aver=aver/(count-2);
+      else
+         aver=0;
+      return aver;
+   }
+}
+School.java
+public class School implements CompurerAverage {
+   【代码1】//重写public double average(double x[])方法,返回数组x[]的元素的算术平均
+}
+Estimator.java
+public class Estimator{    //主类
+   public static void main(String args[]) {
+      double a[] = {9.89,9.88,9.99,9.12,9.69,9.76,8.97};
+      double b[] ={56,55.5,65,50,51.5,53.6,70,49,66,62,46};  
+      CompurerAverage computer;
+      computer=new SongGame();  
+      double result=【代码2】 //computer调用average(double x[])方法，将数组a传递给参数x
+      System.out.printf("%n");
+      System.out.printf("歌手最后得分:%5.3f\n",result);
+      computer=new School();  
+      result=【代码3】 //computer调用average(double x[])方法，将数组b传递给参数x
+      System.out.printf("学生平均体重:%-5.2f kg",result);
+   } 
+}
+
+26.　天气预报
+请按模板要求，将【代码】替换为Java程序代码。
+WeatherState.java
+public interface WeatherState {   //接口
+    public void showState();
+}
+Weather.java
+public class Weather {
+   WeatherState  state;
+   public void show() {
+      state.showState();
+   }
+   public void setState(WeatherState s) {
+      state = s;
+   }
+}
+WeatherForecast.java
+public class WeatherForecast {  //主类
+   public static void main(String args[]) {
+      Weather weatherBeijing =new Weather();
+      System.out.print("\n今天白天:");
+      weatherBeijing.setState(new CloudyDayState());
+      weatherBeijing.show();
+      System.out.print("\n今天夜间:");
+      weatherBeijing.setState(new LightRainState());
+      weatherBeijing.show();
+      System.out.print("转:");
+      weatherBeijing.setState(new HeavyRainState());
+      weatherBeijing.show();
+      System.out.print("\n明天白天:");
+      weatherBeijing.setState(new LightRainState());
+      weatherBeijing.show();
+      System.out.print("\n明天夜间:");
+      weatherBeijing.setState(new CloudyLittleState());
+      weatherBeijing.show();
+   }
+}
+CloudyLittleState.java
+public class CloudyLittleState implements WeatherState {
+    public void showState() {
+       System.out.print("少云,有时晴.");
+    }
+}
+CloudyDayState.java
+public class CloudyDayState implements WeatherState {
+    【代码1】 //重写public void showState()
+}
+HeavyRainState.java
+public class HeavyRainState implements WeatherState{
+    【代码2】 //重写public void showState()
+}
+LightRainState.java
+public class LightRainState implements WeatherState {
+    【代码3】 //重写public void showState()方法
+}
+27 红牛农场
+程序模板
+请按模板要求，将【代码】替换为Java程序代码。
+RedCowForm.java
+public class RedCowForm {
+   String formName;
+    【代码1】     //用内部类RedCow声明对象cow
+   RedCowForm() {
+   }
+   RedCowForm(String s) {
+     【代码2】 //创建cow
+      formName=s;
+   }
+   public void showCowMess() {
+      cow.speak();                
+   }
+   class RedCow {     //内部类的声明
+      String cowName="红牛";
+      int height,weight,price;
+      RedCow(int h,int w,int p){
+          height=h;
+          weight=w;
+          price=p;
+      }
+      void speak() {
+         System.out.println(cowName+",身高:"+height+"cm 体重:"+weight+"kg");
+         System.out.println("生活在"+formName);
+      }
+   }
+}
+MainClass.java
+public class MainClass {
+   public static void main(String args[]) {
+      RedCowForm form = new RedCowForm("红牛农场");
+      form.showCowMess();
+   }   
+}
+28　检查危险品
+程序模板
+请按模板要求，将【代码】替换为Java程序代码。
+Goods.java
+public class Goods {
+   boolean isDanger;
+   String name;
+   public void setIsDanger(boolean boo) {
+      isDanger = boo;
+   }
+   public boolean isDanger() {
+      return isDanger;  
+   }
+   public void setName(String s) {
+      name = s;
+   }
+   public String getName() {
+      return name;
+   }
+}
+DangerException.java
+public class DangerException extends Exception {
+   String message;
+   public DangerException() {
+       message = "危险品!";
+   }
+   public void toShow() {
+       System.out.print(message+" ");
+   }
+}
+Machine.java
+public class Goods {
+   boolean isDanger;
+   String name;
+   public void setIsDanger(boolean boo) {
+      isDanger = boo;
+   }
+   public boolean isDanger() {
+           【代码1】   
+   }
+Check.java
+public class Check {
+   public static void main(String args[]) {
+      Machine machine = new Machine();
+      String name[] ={"苹果","炸药","西服","硫酸","手表","硫磺"};
+      Goods [] goods = new Goods[name.length]; //检查6件物品  
+      for(int i= 0;i<name.length;i++) {
+         goods[i] = new Goods();
+         if(i%2==0) {
+            goods[i].setIsDanger(false);
+            goods[i].setName(name[i]);
+         }
+         else {
+            goods[i].setIsDanger(true);
+            goods[i].setName(name[i]);
+         } 
+      }
+      for(int i= 0;i<goods.length;i++) {
+        try { machine.checkBag(goods[i]);
+            System.out.println(goods[i].getName()+"检查通过");
+        }
+        catch(DangerException e) {
+           【代码2】 //e调用toShow()方法
+            System.out.println(goods[i].getName()+"被禁止!"); 
+        }
+      }     
+   } 
+}

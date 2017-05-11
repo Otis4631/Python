@@ -1,0 +1,15 @@
+import java.util.*;
+public class Find{
+	public static void main(String args[]){
+		Scanner reader=new Scanner(System.in);
+		int [] s=new int[10];
+		for(int i=0;i<10;i++)
+		{
+			s[i]=reader.nextInt();
+		}
+		Arrays.sort(s);
+		int a=reader.nextInt();
+		int index=Arrays.binarySearch(s,a)+1;
+		System.out.println("ÅÅµÚ£º"+index);
+	}
+}
